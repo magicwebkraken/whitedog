@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE WHITE DOG ($whitedog)</title>
+    <link rel="icon" href="/123.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Chakra Petch"', 'sans-serif'],
+              display: ['"Russo One"', 'sans-serif'],
+            },
+            colors: {
+              meme: {
+                bg: '#ffffff', 
+                text: '#09090b', 
+                card: '#ffffff',
+                primary: '#22c55e', 
+                secondary: '#ef4444',
+                accent: '#8b5cf6',
+              }
+            },
+            animation: {
+              'marquee': 'marquee 20s linear infinite',
+              'marquee-reverse': 'marqueeReverse 20s linear infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'twinkle': 'twinkle 4s ease-in-out infinite',
+              'lightning': 'lightning 5s infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              marqueeReverse: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0%)' },
+              },
+              twinkle: {
+                '0%, 100%': { opacity: 0.8 },
+                '50%': { opacity: 0.3 },
+              },
+              lightning: {
+                '0%, 90%': { opacity: 0 },
+                '92%': { opacity: 0.1, background: 'white' },
+                '93%': { opacity: 0 },
+                '94%': { opacity: 0.05, background: 'white' },
+                '96%': { opacity: 0 },
+                '100%': { opacity: 0 }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        /* Dark Universe Background */
+        background-image: 
+            /* Stars Layer 1 */
+            radial-gradient(white, rgba(255,255,255,.8) 1px, transparent 2px),
+            /* Stars Layer 2 */
+            radial-gradient(white, rgba(255,255,255,.5) 1px, transparent 1.5px),
+            /* Deep Purple/Blue Nebula */
+            radial-gradient(circle at 50% 50%, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+            
+        background-size: 550px 550px, 350px 350px, 100% 100%;
+        background-position: 0 0, 40px 60px, 0 0;
+        background-attachment: fixed;
+        
+        color: #ffffff;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Lightning Overlay */
+      body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0);
+        pointer-events: none;
+        z-index: 1;
+        animation: lightning 8s infinite;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ffffff; 
+        border-radius: 0px;
+        border: 2px solid #000;
+      }
+      
+      /* Text outline utility */
+      .text-outline {
+        -webkit-text-stroke: 2px black;
+        paint-order: stroke fill;
+        text-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+      }
+      
+      .font-display {
+        font-family: 'Russo One', sans-serif;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.3",
+    "@solana/web3.js": "https://esm.sh/@solana/web3.js@1.87.6",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-B55AqGIP.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Entry point for Vite/React -->
+  </body>
+</html>
